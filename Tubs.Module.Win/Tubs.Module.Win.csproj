@@ -151,6 +151,12 @@
       <DependentUpon>TubObjectViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewController1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewController1.Designer.cs">
+      <DependentUpon>ViewController1.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinModule.cs">
       <SubType>Component</SubType>
     </Compile>
