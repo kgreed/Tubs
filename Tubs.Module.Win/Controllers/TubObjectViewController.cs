@@ -21,6 +21,7 @@ namespace Tubs.Module.Win.Controllers
     {
         public TubObjectViewController()
         {
+
             InitializeComponent();
             TargetObjectType = typeof(NPTub);
             // Target required Views (via the TargetXXX properties) and create their Actions.
