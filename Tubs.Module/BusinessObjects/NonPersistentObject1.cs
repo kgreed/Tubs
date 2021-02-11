@@ -15,6 +15,7 @@ namespace Tubs.Module.BusinessObjects
 {
     [DomainComponent]
     [DefaultClassOptions]
+    [NavigationItem("Config")]
     //[ImageName("BO_Unknown")]
     //[DefaultProperty("SampleProperty")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
@@ -35,22 +36,22 @@ namespace Tubs.Module.BusinessObjects
         [Browsable(false)]  // Hide the entity identifier from UI.
         public Guid Oid { get; set; }
 
-        //private string sampleProperty;
-        //[XafDisplayName("My display name"), ToolTip("My hint message")]
-        //[ModelDefault("EditMask", "(000)-00"), VisibleInListView(false)]
-        //[RuleRequiredField(DefaultContexts.Save)]
-        //public string SampleProperty
-        //{
-        //    get { return sampleProperty; }
-        //    set
-        //    {
-        //        if (sampleProperty != value)
-        //        {
-        //            sampleProperty = value;
-        //            OnPropertyChanged();
-        //        }
-        //    }
-        //}
+        private string sampleProperty;
+        [XafDisplayName("My display name"), ToolTip("My hint message")]
+        [ModelDefault("EditMask", "(000)-00"), VisibleInListView(false)]
+        [RuleRequiredField(DefaultContexts.Save)]
+        public string SampleProperty
+        {
+            get { return sampleProperty; }
+            set
+            {
+                if (sampleProperty != value)
+                {
+                    sampleProperty = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
         //public void ActionMethod() {
