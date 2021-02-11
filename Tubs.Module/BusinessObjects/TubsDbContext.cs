@@ -7,6 +7,7 @@ using System.Data.Common;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
 using System.ComponentModel;
+using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.DC;
 using DevExpress.ExpressApp.EF.Updating;
 using DevExpress.Persistent.BaseImpl.EF;
@@ -44,7 +45,7 @@ namespace Tubs.Module.BusinessObjects {
 	[DomainComponent]
     [DefaultClassOptions]
     [NavigationItem("Config")]
-    public class NPTub
+    public class NPTub :IObjectSpaceLink
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -61,5 +62,7 @@ namespace Tubs.Module.BusinessObjects {
             return l.ToList();
 
         }
+
+        public IObjectSpace ObjectSpace { get; set; }
     }
 }
