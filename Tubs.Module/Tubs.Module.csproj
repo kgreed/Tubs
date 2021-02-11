@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\NonPersistentObject1.cs" />
     <Compile Include="BusinessObjects\NPTub.cs" />
     <Compile Include="BusinessObjects\TubsContextInitializer.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />

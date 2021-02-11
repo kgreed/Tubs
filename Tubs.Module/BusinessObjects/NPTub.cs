@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Data;
@@ -9,7 +10,7 @@ namespace Tubs.Module.BusinessObjects
     [DomainComponent]
     [DefaultClassOptions]
     [NavigationItem("Config")]
-    public class NPTub : NonPersistentBaseObject ,IObjectSpaceLink
+    public class NPTub : IXafEntityObject, IObjectSpaceLink, INotifyPropertyChanged//: NonPersistentBaseObject ,IObjectSpaceLink
     {
         [Key]
         public int Id { get; set; }
@@ -29,5 +30,21 @@ namespace Tubs.Module.BusinessObjects
         }
 
         public IObjectSpace ObjectSpace { get; set; }
+        public void OnCreated()
+        {
+            //throw new System.NotImplementedException();
+        }
+
+        public void OnSaving()
+        {
+            //throw new System.NotImplementedException();
+        }
+
+        public void OnLoaded()
+        {
+            //throw new System.NotImplementedException();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
