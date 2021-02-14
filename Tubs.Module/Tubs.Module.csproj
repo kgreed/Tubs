@@ -104,6 +104,12 @@
     <Compile Include="BusinessObjects\NonPersistentObject1.cs" />
     <Compile Include="BusinessObjects\NPTub.cs" />
     <Compile Include="BusinessObjects\TubsContextInitializer.cs" />
+    <Compile Include="Controllers\UserController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\UserController.Designer.cs">
+      <DependentUpon>UserController.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
@@ -114,7 +120,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controllers\UserController.resx">
+      <DependentUpon>UserController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BusinessObjects\ReadMe.txt" />
