@@ -5,17 +5,8 @@ using Tubs.Module.BusinessObjects;
 namespace Tubs.Module.Win.Controllers
 {
     [System.ComponentModel.DesignerCategory("")]
-    // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
-    public partial class TubObjectViewController : ObjectViewController<ListView, NPTub>
+      public partial class TubObjectViewController : ObjectViewController<ListView, NPTub>
     {
-        public TubObjectViewController()
-        {
-            // InitializeComponent();
-            TargetObjectType = typeof(NPTub);
-            // Target required Views (via the TargetXXX properties) and create their Actions.
-           
-        }
-
         protected override void OnActivated()
         {
             base.OnActivated();
@@ -49,12 +40,6 @@ namespace Tubs.Module.Win.Controllers
             var o = new NPTub();
             e.Objects = o.GetData();
             e.ShapeData = true;
-        }
-
-        protected override void OnViewControlsCreated()
-        {
-            base.OnViewControlsCreated();
-            // Access and customize the target View control.
         }
 
         protected override void OnDeactivated()

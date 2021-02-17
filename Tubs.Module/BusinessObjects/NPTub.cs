@@ -20,6 +20,7 @@ namespace Tubs.Module.BusinessObjects
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        [VisibleInListView(false)]
         public PhoneNo Phone { get; set; }
 
         public List<NPTub> GetData()
