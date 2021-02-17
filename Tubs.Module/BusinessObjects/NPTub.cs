@@ -10,7 +10,7 @@ namespace Tubs.Module.BusinessObjects
     [DomainComponent]
     [DefaultClassOptions]
     [NavigationItem("Config")]
-    public class NPTub : IXafEntityObject, IObjectSpaceLink, INotifyPropertyChanged//: NonPersistentBaseObject ,IObjectSpaceLink
+    public class NPTub : BaseTub//, IXafEntityObject, IObjectSpaceLink, INotifyPropertyChanged//: NonPersistentBaseObject ,IObjectSpaceLink
     {
         [Key]
         public int Id { get; set; }
