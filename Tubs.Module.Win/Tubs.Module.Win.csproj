@@ -150,6 +150,13 @@
     <Compile Include="Controllers\TubObjectViewController.Designer.cs">
       <DependentUpon>TubObjectViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\PhoneControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\PhoneControl.Designer.cs">
+      <DependentUpon>PhoneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\PhoneEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewController1.cs">
       <SubType>Component</SubType>
@@ -165,6 +172,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Editors\PhoneControl.resx">
+      <DependentUpon>PhoneControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
