@@ -68,14 +68,7 @@ namespace Tubs.Module.Win.Editors
             }
             base.Dispose(disposing);
         }
-        //RepositoryItem IInplaceEditSupport.CreateRepositoryItem()
-        //{
-        //    RepositoryItemSpinEdit item = new RepositoryItemSpinEdit();
-        //    item.MinValue = 0;
-        //    item.MaxValue = 5;
-        //    item.Mask.EditMask = "0";
-        //    return item;
-        //}
+        
         protected override object GetControlValueCore()
         {
             return (string) control?.Text;

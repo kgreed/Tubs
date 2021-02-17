@@ -1,4 +1,5 @@
-﻿using DevExpress.ExpressApp;
+﻿using System.Diagnostics;
+using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.SystemModule;
 using Tubs.Module.BusinessObjects;
 namespace Tubs.Module.Win.Controllers
@@ -24,6 +25,15 @@ namespace Tubs.Module.Win.Controllers
             ObjectSpace.Refresh();
             Frame.GetController<FilterController>()?.Active.SetItemValue("Workaround T890466", false);
             Frame.GetController<FilterController>()?.Active.RemoveItem("Workaround T890466");
+            View.SelectionChanged += View_SelectionChanged;
+        }
+
+        private void View_SelectionChanged(object sender, System.EventArgs e)
+        {
+            var lv = sender as ListView;
+            var tub = lv.CurrentObject as NPTub;
+            tub.Phone.PhoneNumber = $"000-{tub.Phone.PhoneNumber}";
+
         }
 
         private void os_ObjectsGetting(object sender, ObjectsGettingEventArgs e)
