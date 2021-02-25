@@ -144,14 +144,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\TubObjectViewController.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controllers\TubObjectViewController.cs" />
     <Compile Include="Controllers\TubObjectViewController.Designer.cs">
       <DependentUpon>TubObjectViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editors\PhoneControl.cs">
+    <Compile Include="Controllers\TubsDetailViewController.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TubsDetailViewController.Designer.cs">
+      <DependentUpon>TubsDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\PhoneControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Editors\PhoneControl.Designer.cs">
       <DependentUpon>PhoneControl.cs</DependentUpon>
